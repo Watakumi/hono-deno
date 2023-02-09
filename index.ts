@@ -5,7 +5,7 @@ import { myProfile } from "./myprofile.ts";
 const app = new Hono();
 
 app.use("*", prettyJSON());
-app.get("/", (c) => c.text("Hello! Hono!"));
+app.get("/", (c) => c.text("Hello! Hono! This is My first Hono Project."));
 app.get("/myprofile", (c) => c.json(myProfile));
 
 serve(app.fetch);
